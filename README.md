@@ -3,7 +3,7 @@
 Um modelo básico para criar aplicações web:
   
   - backend: Django Rest Framework
-  - frontend construído com React TypeScript
+  - frontend: React TypeScript
 
 ## Pré-Requisitos
 
