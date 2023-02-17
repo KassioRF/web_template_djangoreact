@@ -14,7 +14,7 @@ Para utilizar este template, siga os seguintes passos:
  
   1. Clone este repositório em sua máquina:
 
-    ``git clone https://github.com/KassioRF/web_template_djangoreact.git``
+    ` git clone https://github.com/KassioRF/web_template_djangoreact.git `
 
   2. Acesse o diretório raiz do projeto:
 
