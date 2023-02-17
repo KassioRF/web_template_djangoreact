@@ -1,6 +1,9 @@
 # web_template_djangoreact
 
-Este é um template básico para a construção de aplicações web com backend construído com Django Rest Framework e frontend construído com React TypeScript. O objetivo deste template é servir como uma base sólida para o desenvolvimento de aplicações web.
+Um modelo básico para criar aplicações web:
+  
+  - backend: Django Rest Framework
+  - frontend construído com React TypeScript
 
 ## Pré-Requisitos
 
