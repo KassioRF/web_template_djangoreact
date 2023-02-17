@@ -22,11 +22,18 @@ Para utilizar este template, siga os seguintes passos:
 
   2. Acesse o diretório raiz do projeto:
 
-  3. Inicie os containers Docker com o docker-compose:
-
+  3. Inicie os containers Docker:
+  ```
+     docker compose up
+  ```     
   4. Abra o navegador e acesse a URL `http://0.0.0.0:3000` para visualizar o frontend da aplicação.
 
   5. Para acessar o backend, utilize a URL `http://0.0.0.0:8000`.
+
+  6. Finalize a execução com:
+  ```
+     docker compose up
+  ```     
 
 ## Estrutura de Diretórios
 
