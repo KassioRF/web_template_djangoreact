@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['0.0.0.0'] # this is the host that Docker uses to run de app
 # Application definition
 
 INSTALLED_APPS = [
+    'api',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

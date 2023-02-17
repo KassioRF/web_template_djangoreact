@@ -1,33 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import api from './services/api'
 
+import { ContactModel } from './models/ContactModel';
+
 import './App.css';
 
 function App() {
   
-  const [currentTime, setCurrentTime] = useState(0);
-  const [currentDate, setCurrentDate] = useState(0);
+  const [ contacts, setContacts ] = useState<ContactModel[]>([])
   
   useEffect(() => {
-    api.get('/').then(response => {
-      const data = response.data;
-      setCurrentTime(data.time);
-      setCurrentDate(data.date)
-    })
-    .catch(error => {
-      console.log(error);
-    })
+    
+    api.get('/contacts').then(response => {
+      setContacts(response.data);
 
-  // fetch(' http://0.0.0.0:8000/').then(res => res.json()).then(data => {
-  //     setCurrentTime(data.time);
-  //     setCurrentDate(data.date)
-  //   });
+    })
+    .catch(error => { console.log(error); });
+
   }, []);
   
   return (
     <div className="App">
       <header className="App-header">
-      <p>The date is {currentDate} and the time is {currentTime}.</p> <br/>
+      <table>
+        <tbody>
+        
+          { contacts.map(c => (
+            <tr key={c.id}>
+              <td>{c.name}</td> 
+              <td>{c.phone}</td>
+            </tr>
+          )) }
+        
+        </tbody>
+      </table>
 
       </header>
     </div>

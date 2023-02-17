@@ -2,15 +2,22 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from datetime import datetime
 
+from rest_framework import viewsets
+from rest_framework import permissions
+
+from api.serializers import ContactSerializer
+from api.models import Contact
+
+
 # Create your views here.
 
-def index(request):
-  current_time = datetime.now().strftime("%-I:%S %p")
-  current_date = datetime.now().strftime("%A %m %-Y")
+"""----------------------------------------------------------------------------
+ Views definidas com Serializers para os modelos
+-----------------------------------------------------------------------------"""
+class ContacstList(viewsets.ModelViewSet):
+  """
+  API endpoint that allows users to be viewed.
+  """ 
+  queryset = Contact.objects.all()
+  serializer_class = ContactSerializer
 
-  data = {
-    'time': current_time,
-    'date': current_date,
-  }
-
-  return JsonResponse(data)
