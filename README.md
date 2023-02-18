@@ -32,7 +32,7 @@ Para utilizar este template, siga os seguintes passos:
 
   6. Finalize a execução com:
   ```
-     docker compose up
+     docker compose down
   ```     
 
 ## Estrutura de Diretórios
