@@ -1,6 +1,6 @@
 # web_template_djangoreact
 
-Um modelo básico para criar aplicações web:
+Um modelo genérico para criar aplicações web com:
   
   - backend: Django Rest Framework
   - frontend: React TypeScript
